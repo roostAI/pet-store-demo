@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.mockito.Mockito;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class Pet_getName_8400ac6fb7_Test {
 
@@ -30,5 +30,13 @@ public class Pet_getName_8400ac6fb7_Test {
         String unexpectedName = "Jerry";
         String actualName = pet.getName();
         assertNotEquals(unexpectedName, actualName);
+    }
+
+    @Test
+    public void testGetNameWithDifferentName() {
+        Mockito.when(pet.getName()).thenReturn("Spike");
+        String expectedName = "Spike";
+        String actualName = pet.getName();
+        assertEquals(expectedName, actualName);
     }
 }
