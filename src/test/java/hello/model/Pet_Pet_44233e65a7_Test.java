@@ -25,8 +25,7 @@ public class Pet {
     @Column(name = "name")
     private String name;
 
-    protected Pet() { }
+    public Pet() { }
 
     // getters and setters
 }
-
