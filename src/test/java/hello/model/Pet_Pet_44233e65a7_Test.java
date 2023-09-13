@@ -2,31 +2,31 @@
 
 package hello.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotNull;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-@Entity
-@Table(name = "pet")
-public class Pet {
+public class PetTest {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @Test
+    public void testPetConstructor() {
+        Pet pet = new Pet();
+        Assertions.assertNotNull(pet);
+    }
 
-    @NotNull
-    @Column(name = "name")
-    private String name;
+    @Test
+    public void testPetId() {
+        Pet pet = new Pet();
+        Long expectedId = 1L;
+        pet.setId(expectedId);
+        Assertions.assertEquals(expectedId, pet.getId());
+    }
 
-    protected Pet() { }
-
-    // getters and setters
+    @Test
+    public void testPetName() {
+        Pet pet = new Pet();
+        String expectedName = "Test Pet";
+        pet.setName(expectedName);
+        Assertions.assertEquals(expectedName, pet.getName());
+    }
 }
-
