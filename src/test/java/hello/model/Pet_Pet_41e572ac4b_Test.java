@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class Pet_Pet_41e572ac4b_Test {
 
@@ -13,7 +14,8 @@ public class Pet_Pet_41e572ac4b_Test {
 
     @BeforeEach
     public void setUp() {
-        pet = new Pet("Tommy");
+        pet = new Pet();
+        pet.setName("Tommy");
     }
 
     @Test
@@ -23,7 +25,16 @@ public class Pet_Pet_41e572ac4b_Test {
 
     @Test
     public void testPetNameWithNull() {
-        assertThrows(NullPointerException.class, () -> new Pet(null));
+        assertThrows(NullPointerException.class, () -> {
+            Pet anotherPet = new Pet();
+            anotherPet.setName(null);
+        });
+    }
+
+    @Test
+    public void testPetConstructorWithoutArguments() {
+        Pet anotherPet = new Pet();
+        assertNotNull(anotherPet);
     }
 
 }
