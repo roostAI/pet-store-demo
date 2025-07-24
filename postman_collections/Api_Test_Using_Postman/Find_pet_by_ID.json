@@ -1,0 +1,27 @@
+[
+  {
+    "petId": 123456789,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 987654321,
+    "statusCode": 400,
+    "scenario": "Invalid ID supplied"
+  },
+  {
+    "petId": -123456789,
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 1234567890,
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 9876543210,
+    "statusCode": 400,
+    "scenario": "Invalid ID supplied"
+  }
+]

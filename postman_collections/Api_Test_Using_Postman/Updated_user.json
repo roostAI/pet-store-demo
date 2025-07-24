@@ -1,0 +1,62 @@
+[
+  {
+    "username": "john_doe",
+    "id_*long": 1234567890123456,
+    "firstName_*string": "John",
+    "lastName_*string": "Doe",
+    "email_*string": "john.doe@example.com",
+    "password_*string": "securepassword123",
+    "phone_*string": "123-456-7890",
+    "userStatus_*integer": 1,
+    "statusCode": 400,
+    "scenario": "Invalid user supplied"
+  },
+  {
+    "username": "jane_smith",
+    "id_*long": 9876543210987654,
+    "firstName_*string": "Jane",
+    "lastName_*string": "Smith",
+    "email_*string": "jane.smith@example.com",
+    "password_*string": "anothersecurepassword",
+    "phone_*string": "987-654-3210",
+    "userStatus_*integer": 0,
+    "statusCode": 404,
+    "scenario": "User not found"
+  },
+  {
+    "username": "alice_johnson",
+    "id_*long": 5555555555555555,
+    "firstName_*string": "Alice",
+    "lastName_*string": "Johnson",
+    "email_*string": "alice.johnson@example.com",
+    "password_*string": "password1234",
+    "phone_*string": "555-555-5555",
+    "userStatus_*integer": 2,
+    "statusCode": 400,
+    "scenario": "Invalid user supplied"
+  },
+  {
+    "username": "bob_wilson",
+    "id_*long": 1111111111111111,
+    "firstName_*string": "Bob",
+    "lastName_*string": "Wilson",
+    "email_*string": "bob.wilson@example.com",
+    "password_*string": "mypassword",
+    "phone_*string": "111-111-1111",
+    "userStatus_*integer": 1,
+    "statusCode": 404,
+    "scenario": "User not found"
+  },
+  {
+    "username": "charlie_brown",
+    "id_*long": 2222222222222222,
+    "firstName_*string": "Charlie",
+    "lastName_*string": "Brown",
+    "email_*string": "charlie.brown@example.com",
+    "password_*string": "password456",
+    "phone_*string": "222-222-2222",
+    "userStatus_*integer": 0,
+    "statusCode": 400,
+    "scenario": "Invalid user supplied"
+  }
+]

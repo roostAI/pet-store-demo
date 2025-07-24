@@ -1,0 +1,32 @@
+[
+  {
+    "username": "john_doe",
+    "password": "securePass123",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "username": "jane_smith",
+    "password": "password456",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "username": "invalid_user",
+    "password": "wrongpassword",
+    "statusCode": 400,
+    "scenario": "Invalid username/password supplied"
+  },
+  {
+    "username": "test_user",
+    "password": "test123",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "username": "bad_credentials",
+    "password": "invalidpass",
+    "statusCode": 400,
+    "scenario": "Invalid username/password supplied"
+  }
+]
