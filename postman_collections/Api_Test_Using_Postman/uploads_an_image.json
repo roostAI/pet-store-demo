@@ -1,0 +1,20 @@
+[
+  {
+    "petId": "123456789",
+    "additionalMetadata": "{\"key\":\"value\"}",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": "987654321",
+    "additionalMetadata": "{\"key2\":\"value2\"}",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": "1122334455",
+    "additionalMetadata": "{\"key3\":\"value3\"}",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]

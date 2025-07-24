@@ -1,0 +1,72 @@
+[
+  {
+    "tags": [
+      {
+        "id": "1",
+        "name": "dog"
+      },
+      {
+        "id": "2",
+        "name": "pet"
+      }
+    ],
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "tags": [
+      {
+        "id": "3",
+        "name": "cat"
+      },
+      {
+        "id": "4",
+        "name": "animal"
+      }
+    ],
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "tags": [
+      {
+        "id": "5",
+        "name": "bird"
+      },
+      {
+        "id": "6",
+        "name": "feathered"
+      }
+    ],
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "tags": [
+      {
+        "id": "7",
+        "name": "fish"
+      },
+      {
+        "id": "8",
+        "name": "aquatic"
+      }
+    ],
+    "statusCode": 400,
+    "scenario": "Invalid tag value"
+  },
+  {
+    "tags": [
+      {
+        "id": "9",
+        "name": "hamster"
+      },
+      {
+        "id": "10",
+        "name": "rodent"
+      }
+    ],
+    "statusCode": 400,
+    "scenario": "Invalid tag value"
+  }
+]
