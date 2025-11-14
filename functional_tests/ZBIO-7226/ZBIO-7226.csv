@@ -1,0 +1,18 @@
+Navigate to Insights View for Functional Tests
+Verify Functional Test Data Display in Insights View
+Test Filter Functionality in Functional Test Insights
+Compare Metrics Between Different Test Types
+Export Functional Test Insights Data
+Select Different Time Periods for Functional Test Insights
+View Detailed Information for Individual Functional Tests
+Check User Preferences Persistence in Functional Test Insights
+Retrieve All Functional Test Results via API
+Filter Functional Tests by Status via API
+Retrieve Detailed Information for a Specific Functional Test via API
+Export Functional Test Results in Different Formats via API
+Retrieve Comparison Data Between Test Types via API
+Update Functional Test Result Status via API
+Retrieve Functional Test Insights for Specific Time Period via API
+Handle Invalid API Requests for Functional Test Insights
+Check Real-time Updates of Functional Test Results via WebSocket API
+Batch Upload Functional Test Results via API
