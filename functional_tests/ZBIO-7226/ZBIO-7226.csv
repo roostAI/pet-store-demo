@@ -1,0 +1,18 @@
+Access Insights View for Functional Tests
+Filter Functional Test Results by Status
+Filter Functional Test Results by Date Range
+Sort Functional Test Results by Different Columns
+Download Test Reports in Different Formats
+View Detailed Information for a Specific Test
+Compare Historical Test Results
+Verify Mobile Responsive Layout
+Verify Integration with Other Test Insights
+Retrieve Functional Test Results via API
+Filter Functional Test Results via API
+Retrieve Test Results for a Specific Date Range via API
+Retrieve Detailed Information for a Specific Test via API
+Generate and Download Test Reports via API
+Compare Test Results Between Two Time Periods via API
+Handle Invalid Date Range in API Request
+Verify Data Accuracy via API
+Retrieve Test Metrics Over Time via API
