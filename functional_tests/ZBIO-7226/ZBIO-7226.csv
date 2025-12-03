@@ -1,0 +1,10 @@
+Display of functional tests in Insights view
+Verify functional test results accuracy
+Filter functional tests by different criteria
+View detailed information for a specific functional test
+Compare current functional test results with historical data
+Verify integration with other test types
+Verify performance impact of functional tests in Insights view
+Verify scalability with large number of functional tests
+Verify visual consistency across test types
+Access Playwright-specific artifacts in functional test insights
