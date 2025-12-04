@@ -1,0 +1,104 @@
+{
+  "scenarios": [
+    {
+      "type": "functional",
+      "title": "Display of Functional Tests in Insights View",
+      "description": "Verify that functional tests are displayed correctly in the Insights view.",
+      "testId": "TC-001",
+      "testDescription": "This test verifies that when a user navigates to the Insights view, functional tests are properly displayed alongside other test types.",
+      "prerequisites": "1. Functional tests have been executed and results are available.\n2. User has access to the Insights dashboard.",
+      "stepsToPerform": "1. Login to the application.\n2. Navigate to the Insights dashboard.\n3. Look for the Functional Tests section/tab.",
+      "expectedResult": "Functional tests are visible in the Insights view, similar to how Unit, Integration, and API tests are displayed."
+    },
+    {
+      "type": "functional",
+      "title": "Functional Test Result Accuracy",
+      "description": "Verify that results displayed for functional tests in Insights view match the actual test results.",
+      "testId": "TC-002",
+      "testDescription": "This test ensures that the test results shown in the Insights view accurately reflect the outcomes of the executed Playwright functional tests.",
+      "prerequisites": "1. Playwright functional tests have been executed with known results (some passing, some failing).",
+      "stepsToPerform": "1. Execute a set of functional tests with Playwright.\n2. Note the test results (passed, failed, skipped).\n3. Navigate to the Insights view.\n4. Compare the displayed results with the known outcomes.",
+      "expectedResult": "The test results displayed in Insights view exactly match the actual results from the Playwright execution."
+    },
+    {
+      "type": "functional",
+      "title": "Functional Test Filtering",
+      "description": "Verify ability to filter functional tests in the Insights view.",
+      "testId": "TC-003",
+      "testDescription": "This test checks if users can filter functional tests based on various criteria like status, test name, or duration.",
+      "prerequisites": "1. Multiple functional tests with different statuses have been executed.",
+      "stepsToPerform": "1. Navigate to the Insights view.\n2. Locate filtering options for functional tests.\n3. Apply filters for test status (passed/failed/skipped).\n4. Apply filters for test names or patterns.\n5. Apply filters for test duration ranges.",
+      "expectedResult": "Filtering options work correctly, showing only functional tests that match the selected criteria."
+    },
+    {
+      "type": "functional",
+      "title": "Functional Test Detailed View",
+      "description": "Verify that detailed view of individual functional test results is available.",
+      "testId": "TC-004",
+      "testDescription": "This test ensures that users can click on a specific functional test in the Insights view to see detailed information about its execution.",
+      "prerequisites": "1. Functional tests have been executed and results are available in Insights view.",
+      "stepsToPerform": "1. Navigate to the Insights view.\n2. Find the functional tests section.\n3. Select a specific functional test.\n4. Click to view detailed information.",
+      "expectedResult": "Detailed view opens showing information such as execution time, duration, steps executed, errors (if any), screenshots (if captured), and execution logs."
+    },
+    {
+      "type": "functional",
+      "title": "Historical Comparison of Functional Tests",
+      "description": "Verify the ability to compare current functional test results with historical data.",
+      "testId": "TC-005",
+      "testDescription": "This test checks if the Insights view allows comparison of current functional test results with previous executions.",
+      "prerequisites": "1. Multiple executions of functional tests are available in the system.",
+      "stepsToPerform": "1. Navigate to the Insights view.\n2. Find the functional tests section.\n3. Look for historical comparison options.\n4. Select to compare current results with a previous execution.\n5. Observe the comparison view.",
+      "expectedResult": "The system displays a comparison between current and historical functional test results, highlighting changes in pass/fail status and execution times."
+    },
+    {
+      "type": "functional",
+      "title": "Integration with Other Test Types",
+      "description": "Verify that functional tests integrate properly with other test types in the Insights view.",
+      "testId": "TC-006",
+      "testDescription": "This test ensures that functional tests are properly integrated with unit, integration, and API tests in a cohesive Insights view.",
+      "prerequisites": "1. All types of tests (unit, integration, API, and functional) have been executed.",
+      "stepsToPerform": "1. Navigate to the Insights view.\n2. Check if there are options to view all test types together.\n3. Toggle between different test type views.\n4. Look for aggregated metrics that include all test types.",
+      "expectedResult": "Functional tests are well integrated with other test types. Users can see combined metrics and can easily switch between viewing specific test types or all tests together."
+    },
+    {
+      "type": "non-functional",
+      "title": "Performance Impact of Functional Tests in Insights View",
+      "description": "Verify that adding functional tests doesn't negatively impact the performance of the Insights view.",
+      "testId": "TC-007",
+      "testDescription": "This test measures the performance of the Insights view before and after adding functional test support to ensure there's no significant degradation.",
+      "prerequisites": "1. Access to performance measuring tools.\n2. Baseline performance metrics of Insights view without functional tests.",
+      "stepsToPerform": "1. Measure the load time of the Insights view with only unit, integration, and API tests.\n2. Implement functional test support in Insights view.\n3. Add a substantial number of functional tests (100+).\n4. Measure the load time again with all test types including functional tests.",
+      "expectedResult": "The load time and responsiveness of the Insights view with functional tests should not be significantly worse (no more than 20% slower) than without functional tests."
+    },
+    {
+      "type": "non-functional",
+      "title": "Scalability of Functional Tests in Insights View",
+      "description": "Verify that the Insights view can handle a large number of functional tests.",
+      "testId": "TC-008",
+      "testDescription": "This test checks the scalability of the Insights view by adding an increasingly large number of functional tests.",
+      "prerequisites": "1. Ability to generate or simulate large numbers of functional test results.",
+      "stepsToPerform": "1. Start with 100 functional tests in the system.\n2. Measure the load time and responsiveness of the Insights view.\n3. Increase to 500 functional tests.\n4. Measure performance again.\n5. Increase to 1000 functional tests.\n6. Measure performance again.\n7. Continue scaling up until performance degradation is observed.",
+      "expectedResult": "The Insights view should maintain acceptable performance (load time under 5 seconds, smooth scrolling) with at least 1000 functional tests."
+    },
+    {
+      "type": "non-functional",
+      "title": "Visual Consistency of Functional Tests in Insights View",
+      "description": "Verify visual consistency of functional test presentation with other test types.",
+      "testId": "TC-009",
+      "testDescription": "This test ensures that functional tests are presented with the same visual style and consistency as the existing test types (unit, integration, API).",
+      "prerequisites": "1. Insights view with all test types implemented.",
+      "stepsToPerform": "1. Navigate to the Insights view.\n2. Compare the visual presentation of functional tests with unit tests.\n3. Compare the visual presentation of functional tests with integration tests.\n4. Compare the visual presentation of functional tests with API tests.\n5. Check for consistency in color coding, icons, and layout across all test types.",
+      "expectedResult": "Functional tests should have the same visual style, consistent color coding for status (pass/fail), and layout structure as the other test types."
+    },
+    {
+      "type": "functional",
+      "title": "Playwright-Specific Features in Functional Test Insights",
+      "description": "Verify that Playwright-specific features are correctly displayed in the Insights view.",
+      "testId": "TC-010",
+      "testDescription": "This test ensures that Playwright-specific capabilities like screenshots, videos, and trace viewers are properly supported in the functional test insights.",
+      "prerequisites": "1. Functional tests that utilize Playwright's screenshot, video recording, and tracing features have been executed.",
+      "stepsToPerform": "1. Execute Playwright tests that generate screenshots, videos, and traces.\n2. Navigate to the Insights view.\n3. Select a functional test with these artifacts.\n4. Check if there are options to view screenshots.\n5. Check if there are options to play recorded videos.\n6. Check if there are options to open trace viewers.",
+      "expectedResult": "The Insights view should provide access to Playwright-specific artifacts: screenshots should be viewable, videos should be playable, and traces should be accessible through an appropriate viewer."
+    }
+  ]
+}
