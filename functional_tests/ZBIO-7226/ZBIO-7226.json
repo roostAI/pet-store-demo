@@ -1,0 +1,204 @@
+{
+  "scenarios": [
+    {
+      "type": "functional",
+      "title": "Verify Basic Insights View Access for Functional Tests",
+      "description": "Validate that users can access the Insights view for Functional tests using Playwright",
+      "testId": "TC-001",
+      "testDescription": "Verify that the Insights view for Functional tests is accessible and properly loaded when a user navigates to it",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions to view test insights\n3. Playwright test environment is set up\n4. Functional test data exists in the system",
+      "stepsToPerform": "1. Launch the application\n2. Navigate to the test insights dashboard\n3. Locate and click on the Functional test insights tab/section\n4. Observe the page load behavior\n5. Verify all UI elements are rendered correctly",
+      "expectedResult": "1. The Functional test insights view loads successfully\n2. All expected UI elements are visible\n3. No console errors are present\n4. The page loads within acceptable performance parameters"
+    },
+    {
+      "type": "functional",
+      "title": "Verify Functional Test Data Display",
+      "description": "Validate that functional test data is correctly displayed in the Insights view",
+      "testId": "TC-002",
+      "testDescription": "Verify that all functional test data (results, metrics, pass/fail rates, etc.) is correctly displayed in the Insights view",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Functional test data exists in the system\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Verify test count statistics are displayed\n3. Verify pass/fail metrics are accurate\n4. Verify test execution times are displayed\n5. Verify any graphs/charts display correctly\n6. Check that all data matches expected values from the test database",
+      "expectedResult": "1. All functional test metrics are displayed correctly\n2. Data values match the expected values from the database\n3. Charts and visualizations render properly and show accurate data\n4. Test counts, pass/fail rates, and execution times are accurate"
+    },
+    {
+      "type": "functional",
+      "title": "Test Filtering Functionality in Functional Test Insights",
+      "description": "Verify that users can filter functional test results in the Insights view",
+      "testId": "TC-003",
+      "testDescription": "Validate that filtering options for functional test insights work as expected, allowing users to narrow down results based on various criteria",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Sufficient functional test data exists with various attributes that can be filtered\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Identify all available filter options\n3. Apply a filter by test status (e.g., Pass/Fail)\n4. Verify filtered results\n5. Clear the filter\n6. Apply a filter by date range\n7. Verify filtered results\n8. Apply multiple filters simultaneously\n9. Verify the combined filter results",
+      "expectedResult": "1. All filter options function correctly\n2. Filtered results match the expected criteria\n3. Multiple filters can be applied simultaneously\n4. Clearing filters restores the full data set\n5. Filter UI components show the active filter state"
+    },
+    {
+      "type": "functional",
+      "title": "Sort Functional Test Results in Insights View",
+      "description": "Verify that sorting functionality works correctly in the Functional test insights view",
+      "testId": "TC-004",
+      "testDescription": "Test the ability to sort functional test results by various attributes such as execution time, name, status, etc.",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Multiple functional test results exist in the system\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Identify sortable columns in the test results table\n3. Click on column header to sort by test name (ascending)\n4. Verify sort order\n5. Click again to sort in descending order\n6. Verify sort order\n7. Repeat steps 3-6 for other sortable columns (execution time, status, etc.)",
+      "expectedResult": "1. Clicking on column headers toggles between ascending and descending sort\n2. Sort indicators (arrows) display correctly in the UI\n3. Results are sorted correctly according to the selected column and direction\n4. Sorting persists when navigating between pages (if pagination exists)"
+    },
+    {
+      "type": "functional",
+      "title": "Search Functionality in Functional Test Insights",
+      "description": "Verify that users can search for specific functional tests in the Insights view",
+      "testId": "TC-005",
+      "testDescription": "Test the search feature to find specific functional tests by name, ID, or other searchable attributes",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Multiple functional test results exist in the system\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Locate the search input field\n3. Enter a known test name or partial name\n4. Verify search results\n5. Clear search and enter a test ID\n6. Verify search results\n7. Test with special characters and edge cases\n8. Test with a search term that should return no results",
+      "expectedResult": "1. Search returns correct matching results\n2. Partial matches work as expected\n3. Search is case-insensitive\n4. No results message appears when appropriate\n5. Search resets correctly when cleared"
+    },
+    {
+      "type": "functional",
+      "title": "Pagination of Functional Test Results",
+      "description": "Verify pagination functionality in the Functional test insights view",
+      "testId": "TC-006",
+      "testDescription": "Test the pagination controls when there are more functional test results than fit on a single page",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Sufficient number of functional test results exist to trigger pagination\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Observe if pagination controls are present\n3. Note the number of results on the first page\n4. Navigate to the second page\n5. Verify different results are displayed\n6. Navigate to the last page\n7. Navigate back to the first page\n8. Change items per page setting (if available)\n9. Verify the number of displayed items changes accordingly",
+      "expectedResult": "1. Pagination controls are displayed when needed\n2. Correct number of results appear on each page\n3. Navigation between pages works smoothly\n4. Current page is visually indicated\n5. Items per page selector (if available) functions correctly"
+    },
+    {
+      "type": "functional",
+      "title": "Detailed View of Individual Functional Test",
+      "description": "Verify that users can view detailed information about a specific functional test",
+      "testId": "TC-007",
+      "testDescription": "Test the ability to drill down into individual functional test results to view detailed information",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Functional test results exist in the system\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Select a specific test result by clicking on it\n3. Verify detailed information panel/page opens\n4. Check that all expected detailed information is displayed (execution logs, screenshots, error details, etc.)\n5. Navigate back to the main insights view\n6. Select a different test result",
+      "expectedResult": "1. Detailed view opens when a test is selected\n2. All detailed information is correctly displayed\n3. Navigation between list view and detailed view works correctly\n4. Any associated artifacts (screenshots, videos, logs) are accessible\n5. Appropriate actions (like rerun test) are available"
+    },
+    {
+      "type": "functional",
+      "title": "Date Range Selection for Functional Test Insights",
+      "description": "Verify date range filter functionality for functional test insights",
+      "testId": "TC-008",
+      "testDescription": "Test the ability to filter functional test results by selecting different date ranges",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Functional test results exist across different dates\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Locate date range selector\n3. Select predefined range (e.g., Last 7 days)\n4. Verify results update accordingly\n5. Select custom date range\n6. Verify results update correctly\n7. Select an invalid date range (if possible)\n8. Test boundary cases (e.g., single day selection)",
+      "expectedResult": "1. Date range selector functions correctly\n2. Results are filtered according to selected date range\n3. Custom date range works properly\n4. Invalid date selections are handled gracefully with appropriate error messages\n5. UI displays the currently selected date range"
+    },
+    {
+      "type": "functional",
+      "title": "Export Functionality for Functional Test Insights",
+      "description": "Verify the ability to export functional test insights data",
+      "testId": "TC-009",
+      "testDescription": "Test the functionality to export functional test insights data in different formats (CSV, PDF, etc.)",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Functional test data exists in the system\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Locate and click the export button/option\n3. Select export format (if multiple options are available)\n4. Initiate the export\n5. Verify the file is downloaded\n6. Open and check the exported file to ensure data accuracy\n7. Repeat for each available export format",
+      "expectedResult": "1. Export functionality works correctly\n2. Downloaded file is in the expected format\n3. File contains all the expected data\n4. Data in the exported file matches what's displayed in the UI\n5. Large exports are handled appropriately"
+    },
+    {
+      "type": "functional",
+      "title": "Comparison View Between Different Functional Test Runs",
+      "description": "Verify the ability to compare results between different functional test runs",
+      "testId": "TC-010",
+      "testDescription": "Test the comparison functionality that allows users to compare metrics and results between different test runs or time periods",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Multiple functional test runs exist in the system\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Locate and activate the comparison feature\n3. Select two different test runs or time periods\n4. Initiate the comparison\n5. Verify that comparison data is displayed correctly\n6. Check that differences are highlighted or otherwise made visible\n7. Try comparing runs with significant differences\n8. Try comparing identical or very similar runs",
+      "expectedResult": "1. Comparison view loads correctly\n2. Differences between runs are clearly indicated\n3. Key metrics are compared side-by-side\n4. Visual indicators help identify improvements or regressions\n5. Comparison data is accurate"
+    },
+    {
+      "type": "functional",
+      "title": "Integration with Other Test Types in Insights Dashboard",
+      "description": "Verify that Functional test insights integrate correctly with other test type insights",
+      "testId": "TC-011",
+      "testDescription": "Test the integration of Functional test insights with Unit, Integration, and API test insights in the overall dashboard",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Test data exists for multiple test types\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the main insights dashboard\n2. Verify that Functional test insights are displayed alongside other test types\n3. Navigate between different test type views (Unit, Integration, API, Functional)\n4. Check that global filters affect all test types appropriately\n5. Verify aggregate metrics that combine different test types\n6. Check navigation consistency between different test type views",
+      "expectedResult": "1. Functional test insights are correctly integrated with other test types\n2. Navigation between test types is consistent and intuitive\n3. Global filters affect all applicable test types\n4. Aggregate metrics correctly include functional test data\n5. Overall dashboard provides a cohesive view of all test types"
+    },
+    {
+      "type": "functional",
+      "title": "Responsive Design of Functional Test Insights View",
+      "description": "Verify that the Functional test insights view is responsive across different screen sizes",
+      "testId": "TC-012",
+      "testDescription": "Test the responsiveness of the Functional test insights view across various device form factors",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Playwright test environment is set up with ability to simulate different viewport sizes",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Test with desktop viewport (e.g., 1920x1080)\n3. Test with tablet viewport (e.g., 768x1024)\n4. Test with mobile viewport (e.g., 375x667)\n5. Check that all key information and controls are accessible on each viewport\n6. Verify any responsive design patterns (collapsible menus, stacked layouts, etc.)\n7. Test interactive elements on touch-based viewports",
+      "expectedResult": "1. The insights view renders appropriately on all tested viewport sizes\n2. No horizontal scrolling is needed on standard viewports\n3. All features remain accessible across devices\n4. Touch interactions work correctly on applicable viewports\n5. Charts and data visualizations resize appropriately"
+    },
+    {
+      "type": "functional",
+      "title": "Error Handling for Missing Functional Test Data",
+      "description": "Verify appropriate error handling when no functional test data is available",
+      "testId": "TC-013",
+      "testDescription": "Test the application's behavior when there is no functional test data to display in the insights view",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Environment with no functional test data, or ability to filter to a state with no results\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Create a scenario where no functional test data is available (either through filtering or in a clean environment)\n3. Observe how the UI handles the empty state\n4. Check for appropriate messages\n5. Verify that UI components don't break with no data",
+      "expectedResult": "1. Clear, user-friendly message indicates that no data is available\n2. No broken UI elements or error messages in the console\n3. Options to modify filters or take other actions are provided\n4. Empty state is visually appropriate (not appearing broken)\n5. Charts and visualizations handle empty data gracefully"
+    },
+    {
+      "type": "functional",
+      "title": "Trend Analysis for Functional Tests",
+      "description": "Verify trend visualization functionality for functional test results",
+      "testId": "TC-014",
+      "testDescription": "Test the trend visualization features that show how functional test metrics change over time",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Functional test data exists across multiple time periods\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Locate trend visualization components (graphs, charts)\n3. Verify that trends over time are correctly displayed\n4. Change the time range and verify the trend display updates\n5. Check tooltip or detailed information on trend points\n6. Verify any anomaly highlighting functions\n7. Test different metric selections for trends if available",
+      "expectedResult": "1. Trend visualizations render correctly\n2. Data points match the expected values\n3. Time ranges can be adjusted and trends update accordingly\n4. Tooltips or detailed information is accessible and accurate\n5. Any trend anomalies are appropriately highlighted\n6. Visual representation is clear and meaningful"
+    },
+    {
+      "type": "functional",
+      "title": "User Permissions for Functional Test Insights",
+      "description": "Verify appropriate access control for functional test insights based on user permissions",
+      "testId": "TC-015",
+      "testDescription": "Test that user permissions correctly control access to functional test insights and related actions",
+      "prerequisites": "1. The application is deployed and accessible\n2. Multiple user accounts with different permission levels exist\n3. Functional test data exists in the system\n4. Playwright test environment is set up",
+      "stepsToPerform": "1. Login with a user who has full permissions\n2. Verify all functional test insights features are accessible\n3. Logout and login with a user who has read-only permissions\n4. Verify they can view data but not modify settings or run actions\n5. Logout and login with a user who has no permissions for functional tests\n6. Verify appropriate access restrictions\n7. Test with additional permission levels if applicable",
+      "expectedResult": "1. Users with full permissions can access all features\n2. Read-only users can view data but action buttons are disabled or hidden\n3. Users without permissions see appropriate access denied messages or the feature is hidden\n4. Permission-based UI adjustments are consistent and clear\n5. No unauthorized access is possible through direct URL manipulation"
+    },
+    {
+      "type": "non-functional",
+      "title": "Performance of Functional Test Insights View Loading",
+      "description": "Measure and verify the load performance of the Functional test insights view",
+      "testId": "NF-001",
+      "testDescription": "Evaluate the loading time and performance of the Functional test insights view with various data volumes",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Various volumes of functional test data exist\n4. Playwright test environment is set up with performance measurement capabilities",
+      "stepsToPerform": "1. Navigate to the Functional test insights view and measure initial load time\n2. Record metrics for Time to First Byte (TTFB), First Contentful Paint (FCP), and Time to Interactive (TTI)\n3. Test with small data set (e.g., 10-50 tests)\n4. Test with medium data set (e.g., 100-500 tests)\n5. Test with large data set (e.g., 1000+ tests)\n6. Measure time for data filtering operations\n7. Measure time for sorting operations",
+      "expectedResult": "1. Initial page load completes within acceptable time thresholds (e.g., < 3 seconds)\n2. UI remains responsive during data loading\n3. Loading indicators are displayed for operations taking > 1 second\n4. Performance degrades gracefully with larger data sets\n5. No browser console errors related to timeouts\n6. Filter and sort operations complete within acceptable time (e.g., < 1 second)"
+    },
+    {
+      "type": "non-functional",
+      "title": "Accessibility of Functional Test Insights View",
+      "description": "Verify WCAG 2.1 accessibility compliance of the Functional test insights view",
+      "testId": "NF-002",
+      "testDescription": "Test the accessibility features of the Functional test insights view for compliance with WCAG 2.1 standards",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Playwright test environment is set up with accessibility testing capabilities",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Run automated accessibility audit using Playwright's accessibility tools\n3. Test keyboard navigation through all interactive elements\n4. Verify proper heading structure\n5. Check color contrast ratios\n6. Verify presence of ARIA attributes where appropriate\n7. Test with screen reader to ensure all content is announced properly\n8. Check that interactive elements have appropriate focus indicators",
+      "expectedResult": "1. No critical accessibility violations are found\n2. All interactive elements are keyboard accessible\n3. Heading structure is logical and hierarchical\n4. Color contrast meets WCAG AA standards (4.5:1 for normal text, 3:1 for large text)\n5. ARIA attributes are correctly implemented\n6. Screen readers can access all content meaningfully\n7. Focus indicators are clearly visible"
+    },
+    {
+      "type": "non-functional",
+      "title": "Browser Compatibility for Functional Test Insights",
+      "description": "Verify that the Functional test insights view works correctly across different browsers",
+      "testId": "NF-003",
+      "testDescription": "Test the functional test insights view on different browsers to ensure consistent behavior and appearance",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Playwright test environment is set up to test multiple browsers (Chromium, Firefox, WebKit)",
+      "stepsToPerform": "1. Navigate to the Functional test insights view in Chromium-based browser (Chrome/Edge)\n2. Verify all features work as expected\n3. Repeat in Firefox\n4. Repeat in WebKit-based browser (Safari)\n5. Compare visual appearance across browsers\n6. Test interactive elements (filtering, sorting, drill-down) in each browser\n7. Check for any browser console errors",
+      "expectedResult": "1. Functional test insights view works consistently across all tested browsers\n2. No significant visual differences between browsers\n3. All interactive features work in each browser\n4. No browser-specific console errors\n5. Data loading and rendering is consistent"
+    },
+    {
+      "type": "non-functional",
+      "title": "Security of Functional Test Insights Data Access",
+      "description": "Verify secure access controls for functional test insights data",
+      "testId": "NF-004",
+      "testDescription": "Test that security controls properly protect access to functional test insights data",
+      "prerequisites": "1. The application is deployed and accessible\n2. Multiple user accounts with different permission levels exist\n3. Playwright test environment is set up",
+      "stepsToPerform": "1. Attempt to access functional test insights without authentication\n2. Verify proper redirection to login\n3. Login with user who has permissions and verify access\n4. Logout and login with user who lacks permissions\n5. Verify access is appropriately restricted\n6. Test direct URL access to protected insights data\n7. Check for any sensitive data exposure in API responses\n8. Verify session timeout behavior",
+      "expectedResult": "1. Unauthenticated access attempts are redirected to login\n2. Users with appropriate permissions can access the data\n3. Users without permissions cannot access the data\n4. Direct URL access is properly protected\n5. No sensitive data is exposed in browser storage or network responses\n6. Sessions timeout after appropriate period of inactivity"
+    },
+    {
+      "type": "non-functional",
+      "title": "Data Accuracy in Functional Test Insights",
+      "description": "Verify the accuracy of data displayed in the Functional test insights view",
+      "testId": "NF-005",
+      "testDescription": "Test that the data displayed in functional test insights accurately reflects the actual test results and metrics",
+      "prerequisites": "1. The application is deployed and accessible\n2. User has appropriate permissions\n3. Known functional test data exists with verifiable results\n4. Access to the underlying data source for verification\n5. Playwright test environment is set up",
+      "stepsToPerform": "1. Navigate to the Functional test insights view\n2. Identify key metrics displayed (pass/fail counts, execution times, etc.)\n3. Compare displayed values with source data\n4. Verify calculated metrics (e.g., pass percentage)\n5. Check data consistency across different views and filters\n6. Verify historical data accuracy\n7. Check data updates when new tests are run",
+      "expectedResult": "1. All displayed data matches the source data\n2. Calculated metrics are mathematically correct\n3. Data is consistent across different views of the same information\n4. Historical trends accurately reflect past test results\n5. New test results are correctly incorporated into the insights view"
+    }
+  ]
+}
