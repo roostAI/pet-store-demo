@@ -1,0 +1,154 @@
+{
+  "scenarios": [
+    {
+      "type": "functional",
+      "title": "Enable Insights View for Playwright Functional Tests",
+      "description": "Verify the configuration and enablement of Insights view for Playwright functional tests",
+      "testId": "PL-INS-001",
+      "testDescription": "This test verifies that users can successfully enable the Insights view feature for Playwright functional tests through the configuration settings, ensuring the feature is properly activated and ready for use.",
+      "prerequisites": "1. Access to application with admin permissions\n2. Playwright test framework already installed and configured\n3. Existing functional tests that can be executed",
+      "stepsToPerform": "1. Navigate to the test configuration dashboard\n2. Locate the Insights configuration section\n3. Verify the current status of Insights for functional tests is disabled\n4. Toggle the 'Enable Insights for Functional Tests' option to ON\n5. Set the data collection level to 'Complete' in the dropdown\n6. Configure the retention period for insights data to 30 days\n7. Save the configuration changes\n8. Run a sample functional test suite\n9. Navigate to the Insights dashboard\n10. Select 'Functional Tests' from the test type filter",
+      "expectedResult": "1. Configuration is saved successfully with a confirmation message\n2. Sample test execution completes with insights data collection\n3. Functional tests appear as a selectable option in the Insights view\n4. Test results from the sample run are visible in the Insights dashboard under Functional Tests category"
+    },
+    {
+      "type": "functional",
+      "title": "Verify Functional Test Results Display in Insights View",
+      "description": "Validate that Playwright functional test results are correctly displayed in the Insights view with all relevant data",
+      "testId": "PL-INS-002",
+      "testDescription": "This test ensures that after executing Playwright functional tests, all test results including pass/fail status, duration, screenshots, and other artifacts are properly displayed in the Insights view with correct formatting and organization.",
+      "prerequisites": "1. Insights view enabled for Playwright functional tests\n2. Completed test runs with mixed results (passed, failed, and skipped tests)",
+      "stepsToPerform": "1. Execute a comprehensive Playwright test suite with various test outcomes\n2. Navigate to the Insights dashboard\n3. Select 'Functional Tests' from the test type filter\n4. Verify the test summary section shows correct counts for passed, failed, and skipped tests\n5. Check that test duration information is displayed accurately\n6. Expand a passed test case and verify all steps are displayed correctly\n7. Expand a failed test case and verify error messages and stack traces are visible\n8. Check that screenshots taken during test execution are properly linked and viewable\n9. Verify that console logs are captured and displayed for each test\n10. Confirm that test metadata (browser, viewport, environment) is correctly shown",
+      "expectedResult": "1. All test results are displayed in the Insights view with proper categorization\n2. Test statistics match the actual execution results\n3. Screenshots are accessible and rendered correctly\n4. Error messages and stack traces are formatted properly and readable\n5. Console logs are complete and chronologically ordered\n6. All test metadata is accurate and matches the test execution environment"
+    },
+    {
+      "type": "functional",
+      "title": "Test Filtering and Sorting in Functional Test Insights",
+      "description": "Verify the functionality of filtering and sorting options specific to Playwright functional tests in the Insights view",
+      "testId": "PL-INS-003",
+      "testDescription": "This test validates that users can effectively filter and sort functional test results in the Insights view using various criteria such as status, duration, browser type, and custom tags, ensuring that large test suites can be efficiently analyzed.",
+      "prerequisites": "1. Insights view enabled for functional tests\n2. Multiple test runs with diverse test characteristics (different browsers, durations, statuses)",
+      "stepsToPerform": "1. Navigate to the Insights dashboard\n2. Select 'Functional Tests' from the test type filter\n3. Apply a filter to show only failed tests and verify the results\n4. Clear filters and apply a filter to show tests for a specific browser (e.g., Chrome)\n5. Add another filter to show tests with duration longer than 5 seconds\n6. Sort the filtered results by execution time in descending order\n7. Apply a custom tag filter (e.g., 'critical-path') if tags are used\n8. Save the current filter combination as a preset named 'Slow Chrome Tests'\n9. Clear all filters and verify all tests are displayed again\n10. Load the saved 'Slow Chrome Tests' preset and verify the correct filters are applied",
+      "expectedResult": "1. Each filter correctly narrows down the displayed test results\n2. Multiple filters work together in a logical AND relationship\n3. Sorting changes the order of displayed tests according to the selected criterion\n4. The filter preset is saved successfully and can be reapplied later\n5. The count of displayed tests updates correctly when filters are applied or removed\n6. Filter and sort operations respond quickly even with large test suites"
+    },
+    {
+      "type": "functional",
+      "title": "Cross-Browser Insights Comparison for Functional Tests",
+      "description": "Validate the ability to compare functional test results across different browsers in the Insights view",
+      "testId": "PL-INS-004",
+      "testDescription": "This test ensures that the Insights view provides effective comparison capabilities for Playwright functional tests executed across multiple browsers, highlighting differences in test outcomes, performance, and visual rendering.",
+      "prerequisites": "1. Insights view enabled for functional tests\n2. Same test suite executed on multiple browsers (Chrome, Firefox, Safari, etc.)\n3. Test runs completed within the same time period",
+      "stepsToPerform": "1. Navigate to the Insights dashboard\n2. Select 'Functional Tests' from the test type filter\n3. Navigate to the 'Browser Comparison' section or enable comparison mode\n4. Select test runs from Chrome, Firefox, and Safari for comparison\n5. Verify the summary statistics showing pass/fail rates across browsers\n6. Identify tests that passed in some browsers but failed in others\n7. For a test that failed in only one browser, compare the screenshots across browsers\n8. Check the performance comparison chart showing test duration differences\n9. Export the comparison report to PDF format\n10. Verify browser-specific console errors are highlighted in the comparison view",
+      "expectedResult": "1. Browser comparison view clearly shows differences in test outcomes across browsers\n2. Tests with inconsistent results across browsers are highlighted\n3. Screenshots comparison displays correctly, showing rendering differences\n4. Performance metrics accurately reflect the execution time differences\n5. The exported PDF contains all relevant comparison data\n6. The comparison view is responsive and navigable even with large test suites"
+    },
+    {
+      "type": "functional",
+      "title": "Handling and Visualization of Flaky Tests in Insights View",
+      "description": "Verify that flaky Playwright functional tests are properly identified and visualized in the Insights view",
+      "testId": "PL-INS-005",
+      "testDescription": "This test validates that the Insights view correctly identifies, categorizes, and visualizes flaky Playwright functional tests that have inconsistent results across multiple runs, providing useful information for troubleshooting.",
+      "prerequisites": "1. Insights view enabled for functional tests\n2. Test suite containing known flaky tests\n3. Multiple executions of the same test suite to demonstrate inconsistency",
+      "stepsToPerform": "1. Configure the test runner to retry failed tests 3 times\n2. Execute a test suite containing known flaky tests\n3. Navigate to the Insights dashboard\n4. Select 'Functional Tests' from the test type filter\n5. Check that flaky tests are flagged with a distinct indicator\n6. Open the details of a flaky test to view its execution history\n7. Verify that pass/fail pattern across attempts is displayed\n8. Examine the 'Flakiness Report' section showing tests ranked by flakiness percentage\n9. Check that screenshots from different execution attempts are available for comparison\n10. Verify that system recommendations for stabilizing flaky tests are provided",
+      "expectedResult": "1. Flaky tests are clearly identified with special indicators or tags\n2. Execution history shows the pattern of passes and failures\n3. Flakiness percentage is calculated correctly based on historical data\n4. Screenshots from different attempts are available and navigable\n5. System provides actionable recommendations for reducing flakiness\n6. Flaky test information persists across test runs for trend analysis"
+    },
+    {
+      "type": "functional",
+      "title": "Historical Trend Analysis for Functional Tests in Insights View",
+      "description": "Validate the historical trend analysis features for Playwright functional tests in the Insights view",
+      "testId": "PL-INS-006",
+      "testDescription": "This test ensures that the Insights view provides comprehensive historical trend analysis for functional tests, allowing users to track changes in test performance, stability, and outcomes over time across multiple test runs.",
+      "prerequisites": "1. Insights view enabled for functional tests\n2. Historical data from at least 10 test runs over a period of time\n3. Test suite with consistent naming and structure across runs",
+      "stepsToPerform": "1. Navigate to the Insights dashboard\n2. Select 'Functional Tests' from the test type filter\n3. Navigate to the 'Trends' or 'Historical Analysis' section\n4. Select a date range covering the last 10 test runs\n5. Examine the line chart showing pass/fail rates over time\n6. Check the performance trend chart showing average test duration changes\n7. Identify the top 5 most frequently failing tests from the trend data\n8. Apply a filter to focus on a specific test case and view its individual trend\n9. Export the trend report to CSV format\n10. Use the comparison tool to compare current results with a baseline run from the past",
+      "expectedResult": "1. Trend charts accurately display the changes in test outcomes over time\n2. Performance metrics show clear patterns of improvement or degradation\n3. Frequently failing tests are correctly identified and ranked\n4. Individual test trend data is consistent with its actual execution history\n5. Exported CSV contains all relevant trend data in a structured format\n6. Comparison with baseline highlights significant changes in test behavior"
+    },
+    {
+      "type": "functional",
+      "title": "Detailed Test Step Analysis in Functional Test Insights",
+      "description": "Verify that detailed test step information is captured and displayed in the Insights view for Playwright functional tests",
+      "testId": "PL-INS-007",
+      "testDescription": "This test ensures that the Insights view captures and displays detailed information about individual test steps in Playwright functional tests, including step duration, screenshots, network requests, and console logs for each step.",
+      "prerequisites": "1. Insights view enabled for functional tests with step-level data collection\n2. Test suite with tests that have multiple defined steps\n3. Tests configured to capture screenshots at key steps",
+      "stepsToPerform": "1. Execute a functional test suite with detailed steps and step screenshots\n2. Navigate to the Insights dashboard\n3. Select 'Functional Tests' from the test type filter\n4. Open a test case with multiple steps\n5. Verify each test step is listed in sequence with its description\n6. Check that step duration information is displayed for each step\n7. Verify screenshots associated with specific steps are shown inline or accessible\n8. Examine network requests captured during each step\n9. Check console logs are segmented and displayed by step\n10. For a failed test, verify that the failure is correctly attributed to the specific step",
+      "expectedResult": "1. All test steps are displayed in the correct sequence\n2. Step durations are accurate and sum up to the total test duration\n3. Screenshots are properly associated with their respective steps\n4. Network requests are correctly grouped by the step during which they occurred\n5. Console logs are properly segmented by step\n6. Failed steps are clearly highlighted with relevant error details"
+    },
+    {
+      "type": "functional",
+      "title": "Network Request Analysis in Functional Test Insights",
+      "description": "Validate the capture and visualization of network requests in Playwright functional tests within the Insights view",
+      "testId": "PL-INS-008",
+      "testDescription": "This test verifies that the Insights view properly captures, analyzes, and displays network request information from Playwright functional tests, including request/response details, timing, and error conditions.",
+      "prerequisites": "1. Insights view enabled for functional tests with network monitoring\n2. Test suite that performs various network operations\n3. Tests that encounter both successful and failed network requests",
+      "stepsToPerform": "1. Execute a functional test suite that generates diverse network activities\n2. Navigate to the Insights dashboard\n3. Select 'Functional Tests' from the test type filter\n4. Open a test with multiple network requests\n5. Navigate to the 'Network' tab or section\n6. Verify all API calls made during the test are listed with their endpoints\n7. Check that request and response headers are captured and viewable\n8. Examine request and response bodies for completeness\n9. Verify network timing information (DNS lookup, connection, TTFB, etc.) is displayed\n10. For failed requests, confirm that error details are properly captured",
+      "expectedResult": "1. All network requests made during the test are captured and displayed\n2. Request and response headers are complete and properly formatted\n3. Request and response bodies are viewable and correctly formatted based on content type\n4. Network timing waterfall chart accurately represents the sequence and duration of requests\n5. Failed network requests show appropriate error information\n6. Network data can be filtered by request type, status code, or domain"
+    },
+    {
+      "type": "functional",
+      "title": "Performance Metrics Visualization in Functional Test Insights",
+      "description": "Verify the collection and visualization of performance metrics for Playwright functional tests in the Insights view",
+      "testId": "PL-INS-009",
+      "testDescription": "This test ensures that the Insights view captures and displays relevant performance metrics for Playwright functional tests, including page load times, CPU usage, memory consumption, and other key performance indicators.",
+      "prerequisites": "1. Insights view enabled for functional tests with performance metrics collection\n2. Playwright configured to capture performance data\n3. Test suite that exercises various performance aspects",
+      "stepsToPerform": "1. Execute a functional test suite with performance data collection enabled\n2. Navigate to the Insights dashboard\n3. Select 'Functional Tests' from the test type filter\n4. Open a test case and navigate to the 'Performance' tab\n5. Check that core web vitals (LCP, FID, CLS) are captured and displayed\n6. Verify that page load timing metrics are shown with a waterfall chart\n7. Examine CPU utilization graph during test execution\n8. Check memory consumption chart for memory leak detection\n9. Verify that resource loading times (JS, CSS, images) are detailed\n10. Compare performance metrics against defined thresholds or baselines",
+      "expectedResult": "1. All relevant performance metrics are captured and displayed\n2. Visualizations (charts and graphs) accurately represent the collected data\n3. Performance outliers are highlighted for easy identification\n4. Metrics are contextualized with acceptable ranges or thresholds\n5. Historical performance comparison is available\n6. Performance bottlenecks are identified with potential remediation suggestions"
+    },
+    {
+      "type": "functional",
+      "title": "Integration with Existing Test Insights Types",
+      "description": "Verify that Playwright functional test insights integrate correctly with existing Unit, Integration, and API test insights",
+      "testId": "PL-INS-010",
+      "testDescription": "This test validates that the newly implemented Playwright functional test insights properly integrate with the existing insights for Unit, Integration, and API tests, ensuring a consistent user experience and cross-test type analysis capabilities.",
+      "prerequisites": "1. Insights view enabled for all test types (Unit, Integration, API, and Functional)\n2. Completed test runs for all test types\n3. Common test subjects that are covered by multiple test types",
+      "stepsToPerform": "1. Navigate to the Insights dashboard\n2. Verify that 'Functional Tests' appears alongside existing test type options\n3. Select 'All Test Types' to view a combined dashboard\n4. Check that functional tests are correctly categorized and not mixed with other test types\n5. Apply filters that span across test types (e.g., by feature or component)\n6. Verify that cross-test type statistics are calculated correctly\n7. Navigate to the test coverage view and confirm functional tests contribute to coverage metrics\n8. Examine the unified timeline view showing executions across all test types\n9. Use the comparison tool to compare results between different test types for the same feature\n10. Verify that global search functionality returns results from all test types including functional",
+      "expectedResult": "1. Functional tests are properly integrated alongside other test types\n2. Combined views show data from all test types with clear differentiation\n3. Cross-test type filters work correctly\n4. Unified statistics and metrics include data from functional tests\n5. Test coverage calculations correctly incorporate functional test coverage\n6. Timeline view shows proper chronological ordering of all test executions\n7. Search functionality returns relevant results from functional tests"
+    },
+    {
+      "type": "functional",
+      "title": "Data Export and API Access for Functional Test Insights",
+      "description": "Verify the data export capabilities and API access for Playwright functional test insights data",
+      "testId": "PL-INS-011",
+      "testDescription": "This test ensures that users can export insights data for Playwright functional tests in various formats and access the data programmatically through APIs, enabling integration with external reporting and analysis tools.",
+      "prerequisites": "1. Insights view enabled for functional tests\n2. Completed test runs with comprehensive insights data\n3. API access credentials configured if required",
+      "stepsToPerform": "1. Navigate to the Insights dashboard\n2. Select 'Functional Tests' from the test type filter\n3. Locate and click on the 'Export' or 'Download' option\n4. Verify export options include CSV, JSON, and PDF formats\n5. Export the data in CSV format and verify file contents\n6. Export the data in JSON format and verify file structure\n7. Generate a PDF report and verify it includes charts, summaries, and detailed test information\n8. Access the insights API endpoint using appropriate authentication\n9. Retrieve functional test results via API and verify data completeness\n10. Verify that API supports filtering and pagination for large data sets",
+      "expectedResult": "1. All export formats are generated successfully\n2. Exported CSV contains all relevant columns with correct data\n3. Exported JSON structure matches the expected schema\n4. PDF report contains all visualizations and data in readable format\n5. API returns data in the expected format\n6. API data matches what is displayed in the UI\n7. API filtering and pagination work as expected"
+    },
+    {
+      "type": "non-functional",
+      "title": "Performance Impact Assessment of Insights Data Collection",
+      "description": "Evaluate the performance impact of enabling insights data collection on Playwright functional test execution",
+      "testId": "PL-INS-012",
+      "testDescription": "This test measures the performance overhead introduced by enabling insights data collection for Playwright functional tests, ensuring that the feature does not significantly degrade test execution times or resource utilization.",
+      "prerequisites": "1. Test environment with consistent hardware and network conditions\n2. Baseline performance measurements of test execution without insights enabled\n3. Representative test suite with a mix of simple and complex tests",
+      "stepsToPerform": "1. Execute the test suite with insights collection disabled and record execution time\n2. Enable basic insights collection and execute the same test suite, recording execution time\n3. Enable comprehensive insights collection (with screenshots, network monitoring, etc.) and execute the test suite again\n4. Compare the execution times across the three configurations\n5. Monitor CPU usage during test execution in each configuration\n6. Monitor memory consumption during test execution in each configuration\n7. Check disk I/O patterns and volume during insights data collection\n8. Measure network bandwidth usage if insights data is transmitted during execution\n9. Run the test with insights enabled on resource-constrained environments\n10. Analyze the scalability by running with insights enabled on very large test suites",
+      "expectedResult": "1. Performance overhead from basic insights collection should be less than 10%\n2. Performance overhead from comprehensive insights collection should be less than 20%\n3. CPU and memory usage remain within acceptable limits\n4. Disk I/O operations do not cause bottlenecks\n5. Network bandwidth usage for data transmission is optimized\n6. System remains stable even with resource constraints\n7. Performance remains acceptable with large test suites"
+    },
+    {
+      "type": "non-functional",
+      "title": "Storage Requirements and Data Retention for Functional Test Insights",
+      "description": "Evaluate the storage requirements and verify data retention policies for Playwright functional test insights",
+      "testId": "PL-INS-013",
+      "testDescription": "This test assesses the storage space required for maintaining Playwright functional test insights data over time and verifies that data retention policies are correctly implemented, ensuring efficient use of storage resources while maintaining necessary historical data.",
+      "prerequisites": "1. Insights view enabled for functional tests\n2. Data retention policy configured (e.g., 30 days)\n3. Monitoring access to storage metrics",
+      "stepsToPerform": "1. Measure the baseline storage usage before collecting insights data\n2. Execute a standard functional test suite and measure the size of collected insights data\n3. Calculate the storage growth rate based on typical test execution frequency\n4. Run the same test suite with maximum data collection (all screenshots, videos, etc.) and measure storage usage\n5. Project storage requirements for 30, 60, and 90 days based on the measured growth rate\n6. Verify that data older than the retention period is automatically purged\n7. Check that data purging occurs without affecting system performance\n8. Verify that manual data cleanup options work correctly\n9. Test the system's behavior when approaching storage limits\n10. Verify that critical data is preserved even when storage optimization is triggered",
+      "expectedResult": "1. Storage requirements are proportional to test suite size and collection detail level\n2. Storage growth projections are accurate based on actual usage patterns\n3. Data older than the configured retention period is automatically removed\n4. Manual data cleanup functions work as expected\n5. System provides warnings when approaching storage limits\n6. Storage optimization preserves critical data while removing less important artifacts\n7. Storage usage statistics are accurate and up-to-date"
+    },
+    {
+      "type": "functional",
+      "title": "Accessibility of Functional Test Insights View",
+      "description": "Verify that the Playwright functional test insights view meets accessibility requirements",
+      "testId": "PL-INS-014",
+      "testDescription": "This test ensures that the insights view for Playwright functional tests is accessible to users with disabilities, complying with WCAG 2.1 AA standards and providing an inclusive experience for all users.",
+      "prerequisites": "1. Insights view enabled for functional tests\n2. Accessibility testing tools available (e.g., axe, WAVE)\n3. Screen reader software installed",
+      "stepsToPerform": "1. Navigate to the Insights dashboard\n2. Select 'Functional Tests' from the test type filter\n3. Run automated accessibility scanning tools and note any violations\n4. Verify that all interactive elements are keyboard accessible\n5. Test keyboard navigation through the entire insights view\n6. Check that all images and charts have appropriate alt text\n7. Verify color contrast ratios meet WCAG AA requirements\n8. Test the insights view with a screen reader to ensure all content is announced properly\n9. Verify that error messages and notifications are accessible\n10. Check that dynamic content updates are announced to screen reader users",
+      "expectedResult": "1. No critical accessibility violations are detected\n2. All interactive elements can be accessed and operated via keyboard\n3. Focus order is logical and intuitive\n4. All visual elements have appropriate text alternatives\n5. Color contrast ratios meet minimum requirements\n6. Screen reader can access and announce all content correctly\n7. Error states are clearly communicated through multiple channels (visual, text, screen reader)\n8. Dynamic content changes are properly announced"
+    },
+    {
+      "type": "functional",
+      "title": "Permissions and Access Control for Functional Test Insights",
+      "description": "Verify that permissions and access controls work correctly for Playwright functional test insights",
+      "testId": "PL-INS-015",
+      "testDescription": "This test validates that the permissions and access control mechanisms for Playwright functional test insights are properly enforced, ensuring that users can only access and modify insights data according to their assigned permissions.",
+      "prerequisites": "1. Multiple user accounts with different permission levels\n2. Insights view enabled for functional tests\n3. Completed test runs with insights data",
+      "stepsToPerform": "1. Log in as an administrator user\n2. Navigate to the permissions configuration for insights\n3. Set up read-only access for 'Viewer' role users\n4. Configure edit access for 'Editor' role users\n5. Set up full administration rights for 'Admin' role users\n6. Log out and log in as a 'Viewer' user\n7. Verify the user can view insights but cannot modify configurations or delete data\n8. Log out and log in as an 'Editor' user\n9. Verify the user can view insights and modify configurations but cannot manage user permissions\n10. Log out and log in as an 'Admin' user and verify full access to all functions",
+      "expectedResult": "1. Viewer role users can only access read-only functions\n2. Editor role users can modify configurations but not manage permissions\n3. Admin role users have full access to all functions\n4. Permission denied messages are clear and helpful\n5. UI elements for unauthorized actions are either hidden or disabled\n6. All permission changes are applied immediately without requiring system restart\n7. Audit logs capture permission changes and access attempts"
+    }
+  ]
+}
