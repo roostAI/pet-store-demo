@@ -1,0 +1,25 @@
+Enable Insights View for Playwright Functional Tests through API
+Enable Insights View for Playwright Functional Tests through UI
+Verify Functional Test Results Display in Insights View
+Retrieve Functional Test Results through API
+Test Filtering and Sorting in Functional Test Insights
+Filter and Sort Functional Test Results via API
+Cross-Browser Insights Comparison for Functional Tests
+Retrieve Cross-Browser Comparison Data via API
+Handling and Visualization of Flaky Tests in Insights View
+Retrieve Flaky Test Information via API
+Historical Trend Analysis for Functional Tests in Insights View
+Retrieve Historical Trend Data via API
+Detailed Test Step Analysis in Functional Test Insights
+Retrieve Test Step Details via API
+Network Request Analysis in Functional Test Insights
+Retrieve Network Request Data via API
+Performance Metrics Visualization in Functional Test Insights
+Retrieve Performance Metrics via API
+Integration with Existing Test Insights Types
+Access Combined Test Type Data via API
+Data Export for Functional Test Insights
+Access Insights Data via API for External Integration
+Verify Accessibility of Functional Test Insights View
+Permissions and Access Control for Functional Test Insights
+API Access Control for Functional Test Insights
