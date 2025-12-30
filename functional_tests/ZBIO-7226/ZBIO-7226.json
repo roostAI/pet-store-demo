@@ -1,0 +1,154 @@
+{
+  "scenarios": [
+    {
+      "type": "functional",
+      "title": "Book Search by Title",
+      "description": "Verify that users can search for books by title",
+      "testId": "TC-001",
+      "testDescription": "Test the book search functionality using a book title as the search parameter",
+      "prerequisites": "Multiple books with different titles exist in the library database",
+      "stepsToPerform": "1. Navigate to the library search page\n2. Select 'Title' as the search parameter\n3. Enter a known book title (e.g., 'The Great Gatsby')\n4. Click the 'Search' button",
+      "expectedResult": "All books matching the search title are displayed in the search results"
+    },
+    {
+      "type": "functional",
+      "title": "Book Search by Author",
+      "description": "Verify that users can search for books by author name",
+      "testId": "TC-002",
+      "testDescription": "Test the book search functionality using an author name as the search parameter",
+      "prerequisites": "Multiple books by different authors exist in the library database",
+      "stepsToPerform": "1. Navigate to the library search page\n2. Select 'Author' as the search parameter\n3. Enter a known author name (e.g., 'J.K. Rowling')\n4. Click the 'Search' button",
+      "expectedResult": "All books by the specified author are displayed in the search results"
+    },
+    {
+      "type": "functional",
+      "title": "Book Search by ISBN",
+      "description": "Verify that users can search for books by ISBN",
+      "testId": "TC-003",
+      "testDescription": "Test the book search functionality using an ISBN as the search parameter",
+      "prerequisites": "Books with unique ISBNs exist in the library database",
+      "stepsToPerform": "1. Navigate to the library search page\n2. Select 'ISBN' as the search parameter\n3. Enter a known ISBN (e.g., '978-0-306-40615-7')\n4. Click the 'Search' button",
+      "expectedResult": "The specific book matching the ISBN is displayed in the search results"
+    },
+    {
+      "type": "functional",
+      "title": "Book Checkout by Valid User",
+      "description": "Verify that registered users can check out available books",
+      "testId": "TC-004",
+      "testDescription": "Test the book checkout process for a user with valid credentials and borrowing privileges",
+      "prerequisites": "1. User is registered in the system\n2. User has valid borrowing privileges\n3. Book is available for checkout",
+      "stepsToPerform": "1. Log in with valid user credentials\n2. Search for an available book\n3. Select the book from search results\n4. Click the 'Checkout' button\n5. Confirm the checkout action",
+      "expectedResult": "1. System displays confirmation message\n2. Book status changes to 'Checked Out'\n3. Book appears in user's borrowed items list\n4. Due date is set according to library policy"
+    },
+    {
+      "type": "functional",
+      "title": "Book Return Process",
+      "description": "Verify that books can be properly returned to the library",
+      "testId": "TC-005",
+      "testDescription": "Test the book return process for a previously checked out book",
+      "prerequisites": "1. User has at least one book checked out\n2. The book's due date has not passed",
+      "stepsToPerform": "1. Log in with valid user credentials\n2. Navigate to 'My Borrowed Items' section\n3. Select a checked out book\n4. Click the 'Return' button\n5. Confirm the return action",
+      "expectedResult": "1. System displays return confirmation message\n2. Book status changes to 'Available'\n3. Book is removed from user's borrowed items list"
+    },
+    {
+      "type": "functional",
+      "title": "Book Renewal Process",
+      "description": "Verify that users can renew borrowed books before the due date",
+      "testId": "TC-006",
+      "testDescription": "Test the book renewal process for a checked out book that is eligible for renewal",
+      "prerequisites": "1. User has at least one book checked out\n2. The book is eligible for renewal (has not reached maximum renewals)\n3. The book's due date has not passed",
+      "stepsToPerform": "1. Log in with valid user credentials\n2. Navigate to 'My Borrowed Items' section\n3. Select a checked out book\n4. Click the 'Renew' button\n5. Confirm the renewal action",
+      "expectedResult": "1. System displays renewal confirmation message\n2. Book's due date is extended according to library policy\n3. Renewal count for the book is incremented"
+    },
+    {
+      "type": "functional",
+      "title": "Late Return Fee Calculation",
+      "description": "Verify that appropriate late fees are calculated for overdue books",
+      "testId": "TC-007",
+      "testDescription": "Test the late fee calculation for books returned after the due date",
+      "prerequisites": "1. User has at least one overdue book\n2. System date is set to be after the book's due date",
+      "stepsToPerform": "1. Log in with valid user credentials\n2. Navigate to 'My Borrowed Items' section\n3. Return an overdue book by clicking 'Return' and confirming\n4. Navigate to 'My Account' or 'Fees' section",
+      "expectedResult": "1. Late fee is calculated correctly based on the number of days overdue\n2. Fee amount is displayed in the user's account\n3. Return confirmation includes information about the late fee"
+    },
+    {
+      "type": "functional",
+      "title": "User Registration",
+      "description": "Verify that new users can register for a library account",
+      "testId": "TC-008",
+      "testDescription": "Test the user registration process with valid information",
+      "prerequisites": "Registration system is operational",
+      "stepsToPerform": "1. Navigate to the library registration page\n2. Enter required personal information (name, address, email, phone)\n3. Create username and password\n4. Accept terms and conditions\n5. Submit registration form",
+      "expectedResult": "1. System creates a new user account\n2. Confirmation message is displayed\n3. User receives confirmation email\n4. User can log in with the new credentials"
+    },
+    {
+      "type": "functional",
+      "title": "Book Reservation",
+      "description": "Verify that users can reserve books that are currently checked out",
+      "testId": "TC-009",
+      "testDescription": "Test the book reservation process for a book that is currently unavailable",
+      "prerequisites": "1. User is registered in the system\n2. Target book is currently checked out by another user",
+      "stepsToPerform": "1. Log in with valid user credentials\n2. Search for a book that is currently checked out\n3. Select the book from search results\n4. Click the 'Reserve' button\n5. Confirm the reservation",
+      "expectedResult": "1. System displays reservation confirmation\n2. Book appears in user's reservation list\n3. User is placed in the reservation queue for the book"
+    },
+    {
+      "type": "functional",
+      "title": "Book Recommendation System",
+      "description": "Verify that the system recommends books based on user's borrowing history",
+      "testId": "TC-010",
+      "testDescription": "Test the book recommendation functionality for users with borrowing history",
+      "prerequisites": "1. User has previously borrowed books\n2. Recommendation system is enabled",
+      "stepsToPerform": "1. Log in with valid user credentials\n2. Navigate to the 'Recommended Books' section\n3. Observe the list of recommended books",
+      "expectedResult": "1. System displays book recommendations based on user's borrowing history\n2. Recommendations are relevant to user's reading preferences\n3. Each recommendation includes book details and availability status"
+    },
+    {
+      "type": "functional",
+      "title": "Book Checkout Limit Enforcement",
+      "description": "Verify that the system enforces maximum book checkout limits",
+      "testId": "TC-011",
+      "testDescription": "Test that users cannot exceed the maximum allowed number of borrowed books",
+      "prerequisites": "1. User is registered in the system\n2. User has borrowed the maximum allowed number of books\n3. At least one more book is available for checkout",
+      "stepsToPerform": "1. Log in with valid user credentials\n2. Search for an available book\n3. Select the book from search results\n4. Attempt to check out the book",
+      "expectedResult": "1. System prevents the checkout action\n2. System displays an error message indicating the maximum checkout limit has been reached\n3. Book remains available for other users"
+    },
+    {
+      "type": "functional",
+      "title": "Advanced Search with Multiple Parameters",
+      "description": "Verify that users can search using combinations of search criteria",
+      "testId": "TC-012",
+      "testDescription": "Test the advanced search functionality using multiple search parameters simultaneously",
+      "prerequisites": "Multiple books with various attributes exist in the library database",
+      "stepsToPerform": "1. Navigate to the advanced search page\n2. Enter an author name in the author field\n3. Select a publication year range\n4. Select a genre from the dropdown\n5. Click the 'Search' button",
+      "expectedResult": "Search results display only books that match all specified criteria (author, publication year range, and genre)"
+    },
+    {
+      "type": "functional",
+      "title": "Password Reset Functionality",
+      "description": "Verify that users can reset their forgotten passwords",
+      "testId": "TC-013",
+      "testDescription": "Test the password reset process for registered users",
+      "prerequisites": "User account exists in the system with a valid email address",
+      "stepsToPerform": "1. Navigate to the login page\n2. Click on 'Forgot Password' link\n3. Enter the registered email address\n4. Submit the form\n5. Check email for reset link\n6. Click on the reset link\n7. Enter new password\n8. Confirm new password\n9. Submit the password reset form",
+      "expectedResult": "1. Reset link is sent to the user's email\n2. User can access the password reset page through the link\n3. After setting a new password, user can log in with the new credentials\n4. System confirms successful password change"
+    },
+    {
+      "type": "functional",
+      "title": "User Profile Update",
+      "description": "Verify that users can update their profile information",
+      "testId": "TC-014",
+      "testDescription": "Test the functionality that allows users to update their personal information",
+      "prerequisites": "User is registered and logged into the system",
+      "stepsToPerform": "1. Navigate to 'My Account' or 'Profile' section\n2. Click on 'Edit Profile' option\n3. Update information (e.g., phone number, address, email)\n4. Save changes",
+      "expectedResult": "1. System saves the updated information\n2. Profile displays the newly updated information\n3. System confirms successful update with a notification"
+    },
+    {
+      "type": "functional",
+      "title": "Book Review Submission",
+      "description": "Verify that users can submit reviews for books they have borrowed",
+      "testId": "TC-015",
+      "testDescription": "Test the book review submission functionality",
+      "prerequisites": "1. User is registered and logged into the system\n2. User has previously borrowed the book they want to review",
+      "stepsToPerform": "1. Navigate to the 'My Borrowed History' section\n2. Select a book from the history\n3. Click on 'Write a Review'\n4. Enter a rating (e.g., 1-5 stars)\n5. Enter review text\n6. Submit the review",
+      "expectedResult": "1. System saves the review\n2. Review appears on the book's details page\n3. System confirms successful submission with a notification"
+    }
+  ]
+}

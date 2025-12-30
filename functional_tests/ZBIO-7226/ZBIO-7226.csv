@@ -1,0 +1,16 @@
+Search for books using different search parameters
+Perform advanced search with multiple parameters
+Book checkout process for different user conditions
+Return a borrowed book before due date
+Return an overdue book with late fee
+Renew a borrowed book before due date
+Attempt to renew books under different conditions
+New user registration with valid information
+Register with invalid information
+Reserve a checked out book
+View personalized book recommendations
+Reset forgotten password
+Update user profile information
+Submit a book review
+Search for non-existent books
+Attempt to check out a book with unpaid late fees
