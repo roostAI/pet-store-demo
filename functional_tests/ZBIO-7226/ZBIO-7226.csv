@@ -1,0 +1,14 @@
+Enable insights view for Playwright functional tests
+Verify functional test results display in insights view
+Filter and sort functional test results using different criteria
+Save and reapply filter combination presets
+Compare functional test results across different browsers
+Identify and analyze flaky tests in insights view
+Analyze historical trends for functional tests
+View detailed test step information in insights view
+Analyze network requests in functional test insights
+View performance metrics in functional test insights
+Verify integration with existing test insights types
+Export insights data in different formats
+Verify accessibility compliance of insights view
+Verify role-based access control for insights view
