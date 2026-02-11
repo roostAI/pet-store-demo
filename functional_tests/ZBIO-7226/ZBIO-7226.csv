@@ -1,0 +1,18 @@
+Navigate to Insights view for Functional Tests
+Verify UI components render correctly in different browsers
+Apply filters to Functional Tests Insights data
+Apply multiple simultaneous filters
+Search for specific test cases
+Navigate between Insights view and detailed test reports
+Verify performance with different data volumes
+Verify accessibility compliance
+Verify consistency between raw data and visualizations
+Configure and customize the Insights view
+Handle error conditions gracefully
+Export insights in different formats
+Generate and use shareable links
+Verify role-based access control
+View and analyze historical trends
+Analyze test coverage visualization
+Verify responsiveness on different devices
+Verify real-time updates of insights data
