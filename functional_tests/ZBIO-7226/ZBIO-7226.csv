@@ -1,0 +1,30 @@
+Navigate to Insights view for functional tests
+Verify navigation across different browsers
+Verify functional test data visualization
+Verify data verification points in visualizations
+Test filter functionality in Functional Test Insights view
+Test search functionality in Functional Test Insights view
+Test filter combination functionality
+Test filter clear functionality
+Verify cross-navigation between different test type insights views
+Test export functionality for Functional Test Insights
+Test sharing functionality for Functional Test Insights
+Verify responsive design of Functional Test Insights view
+Verify interactive elements on different screen sizes
+Test data consistency between backend API and UI
+Verify data consistency for specific metrics
+Test user preference persistence
+Test error handling with different data scenarios
+Verify error states provide actionable information
+Test accessibility compliance
+Test keyboard navigation
+Verify theme support in Functional Test Insights view
+Test custom dashboard creation
+Test custom dashboard editing
+Test historical trend analysis with different time periods
+Test trend comparison between time periods
+Test real-time updates notification
+Test manual refresh functionality
+Test auto-refresh functionality
+Test drill-down from summary to detailed test results
+Test complete drill-down path to individual test case

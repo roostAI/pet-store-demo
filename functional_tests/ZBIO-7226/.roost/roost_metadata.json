@@ -1,0 +1,19 @@
+{
+  "project": {
+    "name": "ZBIO-7226",
+    "created_at": "2026-03-26T06:12:10.132Z",
+    "updated_at": "2026-03-26T06:12:10.132Z"
+  },
+  "files": {
+    "input_files": [
+      {
+        "fileName": "ZBIO-7226.txt",
+        "fileURI": "/var/tmp/Roost/RoostGPT/pw-ft-bedrock-github-1774503029041/5fc18904-6c8f-480c-8857-a51d9af09060/functional_tests/ZBIO-7226/ZBIO-7226.txt",
+        "fileSha": "c198984f59"
+      }
+    ]
+  },
+  "api_files": {
+    "input_files": []
+  }
+}
