@@ -1,0 +1,18 @@
+Navigate to Functional Tests Insights view
+Verify data accuracy in Functional Tests Insights view
+Verify chart visualization accuracy
+Test filtering capabilities with different criteria
+Test sorting functionality on different columns
+Apply multiple filters simultaneously
+Compare consistency across different test type insights views
+Validate error handling for various edge cases
+Verify performance with large datasets
+Test data export in different formats
+Navigate from summary metrics to detailed test results
+Verify cross-browser compatibility
+Create and save custom dashboard
+Verify mobile responsiveness
+Verify updates when new test results become available
+Verify accessibility compliance
+Verify permission-based access control
+Verify historical trend analysis
