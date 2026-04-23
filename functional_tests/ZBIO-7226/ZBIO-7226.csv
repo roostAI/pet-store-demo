@@ -1,0 +1,18 @@
+Verify presence of Functional Tests section in Insights dashboard
+Verify proper rendering of functional test visualization components
+Verify data integration accuracy between test results and insights view
+Verify filtering functionality for functional test results
+Verify sorting functionality for functional test results
+Verify multiple filters can be applied simultaneously
+Verify cross-test type comparison functionality
+Verify performance with different functional test dataset sizes
+Verify real-time data updates for functional test results
+Verify error handling in functional test insights view
+Verify accessibility compliance of visualization components
+Verify export functionality for functional test insights
+Verify custom dashboard creation for functional test results
+Verify functional test categorization and tagging in insights view
+Verify historical trend analysis for functional tests
+Verify notification configuration for functional test insights
+Verify root cause analysis tools for failed functional tests
+Verify environment impact analysis on functional tests
