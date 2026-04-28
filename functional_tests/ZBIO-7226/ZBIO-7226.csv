@@ -1,0 +1,42 @@
+Navigate to Functional Test Insights view from main dashboard
+Verify Functional Test Insights view across different browsers
+Verify display of test results with different statuses
+Access detailed information for a passed test
+Access detailed information for a failed test
+Filter test results by status
+Filter test results by browser
+Apply multiple filters simultaneously
+Clear all applied filters
+Sort test results by different criteria
+Navigate between different test type views
+Access screenshot artifact from a failed test
+Access video recording artifact from a failed test
+Access Playwright trace from a failed test
+Download test artifacts
+Verify dashboard summary statistics
+Change time period for summary statistics
+Search for tests by different criteria
+Search with partial test name
+Clear search criteria
+Export test results in various formats
+Export filtered test results
+View test execution history for a specific test
+Compare results between different test runs
+Run accessibility audit on Functional Tests Insights view
+Navigate using keyboard only
+View performance metrics visualization
+Customize column visibility
+Handle network error during data loading
+Compare test results across different environments
+Enable real-time updates for ongoing test runs
+Access Functional Test Insights with different user roles
+Verify responsive design at different screen sizes
+Perform batch actions on multiple test results
+Navigate between related tests of different types
+Use visual comparison tool for visual regression tests
+Verify persistence of user preferences across sessions
+Trigger re-execution of selected tests
+Add and filter by custom tags
+Deep linking to specific filtered view
+Verify multi-language support
+Identify and highlight flaky tests
